@@ -170,7 +170,8 @@ const Siswa = () => {
             pekerjaan_wali: data.pekerjaan_wali,
             penghasilan_wali: data.penghasilan_wali,
             alamat_tinggal: data.alamat_tinggal,
-            telp_siswa: data.telp_siswa
+            telp_siswa: data.telp_siswa,
+            telp_alternatif_siswa: data.telp_alternatif_siswa
         }
 
         const siswa = new FormData()
@@ -211,6 +212,7 @@ const Siswa = () => {
         setValue('nama_wali', detailIsi[index]?.nama_wali)
         setValue('alamat_tinggal', detailIsi[index]?.alamat_tinggal)
         setValue('telp_siswa', detailIsi[index]?.telp_siswa)
+        setValue('telp_alternatif_siswa', detailIsi[index]?.telp_alternatif_siswa)
         setValue('nis', isi[index]?.nis)
         setValue('tanggal_masuk_ubah', isi[index]?.tanggal_masuk)
         setValue('tanggal_keluar', isi[index]?.tanggal_keluar)
@@ -407,6 +409,10 @@ const Siswa = () => {
                                                 </select>
                                             </div>
                                             <div className="mb-3">
+                                                <label htmlFor="telp_siswa" className="form-label">Nomor Telepon Ayah</label>
+                                                <input type="text" className="form-control" id="telp_siswa" {...register("telp_siswa", { required: true })} />
+                                            </div>
+                                            <div className="mb-3">
                                                 <label htmlFor="nama_ibu" className="form-label">Nama Ibu</label>
                                                 <input type="text" className="form-control" id="nama_ibu" {...register("nama_ibu", { required: true })} />
                                             </div>
@@ -463,6 +469,10 @@ const Siswa = () => {
                                                         )
                                                     }
                                                 </select>
+                                            </div>
+                                            <div className="mb-3">
+                                                <label htmlFor="telp_alternatif_siswa" className="form-label">Nomor Telepon Ibu</label>
+                                                <input type="text" className="form-control" id="telp_alternatif_siswa" {...register("telp_alternatif_siswa", { required: true })} />
                                             </div>
                                             <div className="mb-3">
                                                 <label htmlFor="nama_wali" className="form-label">Nama Wali</label>
@@ -527,11 +537,7 @@ const Siswa = () => {
                                             <div className="mb-3">
                                                 <label htmlFor="alamat_tinggal" className="form-label">Alamat Tinggal</label>
                                                 <input type="text" className="form-control" id="alamat_tinggal" {...register("alamat_tinggal", { required: true })} />
-                                            </div>
-                                            <div className="mb-3">
-                                                <label htmlFor="telp_siswa" className="form-label">Telp Siswa</label>
-                                                <input type="text" className="form-control" id="telp_siswa" {...register("telp_siswa", { required: true })} />
-                                            </div>
+                                            </div> 
                                         </div>
                                         <div className="tab-pane fade" id="kesiswaan" role="tabpanel" aria-labelledby="kesiswaan-tab">
                                             <div className="mb-3">
