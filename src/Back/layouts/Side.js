@@ -22,7 +22,7 @@ const Side = () => {
                     <Link to={`${url}/bidangpengembangan`} className={currentURL.includes('/bidangpengembangan') ? "text-decoration-none text-blue ps-3 mt-3" : currentURL.includes('indikator') ? "text-decoration-none text-blue ps-3 mt-3" : 'text-decoration-none text-black ps-3 mt-3'}><i className="fa fa-edit pe-3" />Bidang Pengembangan</Link>
                     <Link to={`${url}/capaian`} className={currentURL.includes('/capaian') ? "text-decoration-none text-blue ps-3 mt-3" : currentURL.includes('/subcapaian') ? "text-decoration-none text-blue ps-3 mt-3" : 'text-decoration-none text-black ps-3 mt-3'}><i className="fa fa-edit pe-3" />Pencapaian</Link>
                     <Link to={`${url}/rapotrombel`} className={currentURL.includes('/rapot') ? "text-decoration-none text-blue ps-3 mt-3" : 'text-decoration-none text-black ps-3 mt-3'}><i className="fa fa-book pe-4" />Rapot</Link>
-                    <Link to={`${url}/grafik`} className={currentURL.includes('/grafik') ? "text-decoration-none text-blue ps-3 mt-3" : 'text-decoration-none text-black ps-3 mt-3'}><i className="fa fa-bar-chart pe-4" />Rekap Nilai</Link>
+                    {/* <Link to={`${url}/grafik`} className={currentURL.includes('/grafik') ? "text-decoration-none text-blue ps-3 mt-3" : 'text-decoration-none text-black ps-3 mt-3'}><i className="fa fa-bar-chart pe-4" />Rekap Nilai</Link> */}
                 </ul>
             </div>
         </div>
